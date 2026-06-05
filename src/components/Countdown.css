@@ -1,0 +1,84 @@
+.countdown-section {
+  background: linear-gradient(180deg, var(--cream) 0%, var(--cream-dark) 100%);
+  padding: 80px 24px;
+  position: relative;
+  overflow: hidden;
+}
+.countdown-section::before {
+  content: '🌺';
+  position: absolute;
+  font-size: 8rem;
+  opacity: 0.04;
+  top: -20px; left: -20px;
+}
+.countdown-section::after {
+  content: '🌺';
+  position: absolute;
+  font-size: 8rem;
+  opacity: 0.04;
+  bottom: -20px; right: -20px;
+  transform: scaleX(-1);
+}
+
+.countdown-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin: 40px 0 32px;
+}
+
+.countdown-card {
+  background: linear-gradient(160deg, var(--maroon) 0%, var(--maroon-dark) 100%);
+  border: 1px solid rgba(201,149,42,0.4);
+  border-radius: 4px;
+  padding: 24px 12px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(123,28,46,0.25), inset 0 1px 0 rgba(255,255,255,0.1);
+}
+.countdown-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.countdown-value {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  color: var(--gold-light);
+  line-height: 1;
+  margin-bottom: 8px;
+  filter: drop-shadow(0 2px 8px rgba(201,149,42,0.4));
+}
+
+.countdown-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-pale);
+  opacity: 0.8;
+}
+
+.countdown-footnote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--text-medium);
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 480px) {
+  .countdown-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

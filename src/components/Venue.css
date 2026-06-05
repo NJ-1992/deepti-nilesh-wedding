@@ -1,0 +1,193 @@
+.venue-section {
+  padding: 80px 24px;
+  background: var(--ivory);
+  position: relative;
+}
+.venue-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--gold), var(--gold-light), var(--gold), transparent);
+}
+
+.venue-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.venue-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 40px 0 32px;
+  margin-bottom: 32px;
+}
+
+.venue-card {
+  background: var(--cream);
+  border: 1px solid rgba(201,149,42,0.25);
+  border-radius: 8px;
+  padding: 32px 28px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 24px rgba(123,28,46,0.06);
+}
+.venue-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(123,28,46,0.12);
+}
+.venue-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  border-radius: 8px 8px 0 0;
+}
+
+.venue-icon {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.venue-tag {
+  display: inline-block;
+  background: var(--maroon);
+  color: var(--gold-light);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 2px;
+  margin-bottom: 12px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+}
+
+.venue-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  color: var(--maroon);
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.venue-address {
+  font-size: 0.85rem;
+  color: var(--text-medium);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.venue-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.venue-feature {
+  background: rgba(201,149,42,0.1);
+  border: 1px solid rgba(201,149,42,0.25);
+  color: var(--text-medium);
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.05em;
+}
+
+.venue-map-btn {
+  background: linear-gradient(135deg, var(--maroon) 0%, var(--maroon-light) 100%);
+  color: var(--gold-light);
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+  box-shadow: 0 4px 16px rgba(123,28,46,0.3);
+}
+.venue-map-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(123,28,46,0.4);
+  opacity: 0.92;
+}
+
+/* Map placeholder */
+.map-placeholder {
+  width: 100%;
+  height: 220px;
+  background: linear-gradient(135deg, #E8F5E9 0%, #F1F8E9 50%, #E3F2FD 100%);
+  border-radius: 8px;
+  border: 2px dashed rgba(201,149,42,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s;
+  margin-top: 32px;
+}
+.map-placeholder:hover { border-color: var(--gold); }
+.map-placeholder:hover .map-overlay { opacity: 1; }
+
+.map-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 1;
+}
+.map-pin { font-size: 3rem; animation: float 2s ease-in-out infinite; }
+.map-content h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: var(--maroon);
+}
+.map-content p {
+  font-size: 0.85rem;
+  color: var(--text-medium);
+  font-style: italic;
+}
+
+.map-road {
+  position: absolute;
+  background: rgba(201,149,42,0.2);
+}
+.map-road-h { left: 0; right: 0; top: 50%; height: 2px; }
+.map-road-v { top: 0; bottom: 0; left: 50%; width: 2px; }
+
+.map-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(123,28,46,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 6px;
+}
+.map-overlay span {
+  color: var(--gold-light);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 640px) {
+  .venue-grid { grid-template-columns: 1fr; }
+}
