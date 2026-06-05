@@ -5,16 +5,16 @@ const VENUES = [
     name: 'Grand Wedding Hall',
     event: 'Wedding Ceremony',
     emoji: '🛕',
-    address: 'Grand Wedding Hall, Station Road, Baramati, Maharashtra 413102',
-    mapQuery: 'Baramati+Maharashtra',
+    address: 'Grand Wedding Hall, Hotel Shri Arjun Palace, Jabalpur Road, Katni, M.P. - 483501',
+    mapQuery: 'Grand+Wedding+Hall+Hotel+Shri+Arjun+Palace+Jabalpur+Road+Katni+Madhya+Pradesh+483501',
     details: ['Valet Parking Available', 'Air Conditioned', 'Catering Included', 'Capacity: 500+'],
   },
   {
-    name: 'Grand Banquet Hall',
+    name: 'Shri Charbhuja Community Hall',
     event: 'Reception Evening',
     emoji: '🏛️',
-    address: 'Grand Banquet Hall, Indapur Road, Baramati, Maharashtra 413102',
-    mapQuery: 'Baramati+Maharashtra+Indapur+Road',
+    address: 'Shri Charbhuja Community Hall, Kanjrada, Neemuch, M.P. - 458110',
+    mapQuery: 'Shri+Charbhuja+Community+Hall+Kanjrada+Neemuch+Madhya+Pradesh+458110',
     details: ['Free Parking', 'Open Air + Indoor', 'Live Entertainment', 'Dinner Buffet'],
   },
 ]
@@ -54,19 +54,41 @@ export default function Venue() {
           ))}
         </div>
 
-        {/* Decorative map placeholder */}
-        <div className="map-placeholder" onClick={() => openMaps('Baramati+Maharashtra')}>
-          <div className="map-content">
-            <div className="map-pin">📍</div>
-            <h4>Baramati, Maharashtra</h4>
-            <p>Click to open in Google Maps</p>
-            <div className="map-road map-road-h" />
-            <div className="map-road map-road-v" />
+        {/* Two map placeholders side by side */}
+        <div className="map-duo">
+          <div
+            className="map-placeholder"
+            onClick={() => openMaps('Grand+Wedding+Hall+Hotel+Shri+Arjun+Palace+Jabalpur+Road+Katni+Madhya+Pradesh+483501')}
+          >
+            <div className="map-content">
+              <div className="map-pin">📍</div>
+              <h4>Wedding Ceremony</h4>
+              <p>Katni, Madhya Pradesh</p>
+              <div className="map-road map-road-h" />
+              <div className="map-road map-road-v" />
+            </div>
+            <div className="map-overlay">
+              <span>🗺️ Open Google Maps</span>
+            </div>
           </div>
-          <div className="map-overlay">
-            <span>🗺️ Open Google Maps</span>
+
+          <div
+            className="map-placeholder"
+            onClick={() => openMaps('Shri+Charbhuja+Community+Hall+Kanjrada+Neemuch+Madhya+Pradesh+458110')}
+          >
+            <div className="map-content">
+              <div className="map-pin">📍</div>
+              <h4>Reception Evening</h4>
+              <p>Neemuch, Madhya Pradesh</p>
+              <div className="map-road map-road-h" />
+              <div className="map-road map-road-v" />
+            </div>
+            <div className="map-overlay">
+              <span>🗺️ Open Google Maps</span>
+            </div>
           </div>
         </div>
+
       </div>
     </section>
   )
