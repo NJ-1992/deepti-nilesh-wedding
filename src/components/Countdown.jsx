@@ -66,7 +66,8 @@ export default function Countdown() {
         </div>
 
         <p className="countdown-footnote">
-          🌸 Jaimala — 6th July 2026, 9:00 PM &nbsp;|&nbsp; 💍 Vidhi (Fera) — 7th July 2026, 6:30 AM
+          🌸 Jaimala — 6th July 2026, 9:00 PM &nbsp;|&nbsp; 💍 Vidhi (Fera) — 7th July 2026, 6:30 AM, venue; Hotel Shri Arjun Palace
+          1791, Maharana Pratap ward 44 Jabalpur road, Katni, M.P.-483501
         </p>
       </div>
     </section>
