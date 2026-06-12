@@ -20,7 +20,7 @@ export default function Hero() {
 
         <div className="hero-names animate-fadeInUp" style={{ animationDelay: '0.5s' }}>
           <div className="hero-name bride">
-            <span className="devanagari">दीप्ति</span>
+            <span className="devanagari">दीप्ती</span>
             <span className="english">Deepti</span>
           </div>
 
@@ -48,7 +48,7 @@ export default function Hero() {
           </div>
 
           <div className="hero-name groom">
-            <span className="devanagari">नीलेश</span>
+            <span className="devanagari">निलेश</span>
             <span className="english">Nilesh</span>
           </div>
         </div>
@@ -63,14 +63,14 @@ export default function Hero() {
 
         {/* Wedding date */}
         <div className="hero-date animate-scaleIn" style={{ animationDelay: '1.3s' }}>
-          <span className="date-day">07</span>
+          <span className="date-day">06</span>
 
           <div className="date-my">
             <span>July</span>
             <span>2026</span>
           </div>
 
-          <span className="date-dow">Tuesday</span>
+          <span className="date-dow">Monday</span>
         </div>
 
         <div className="hero-cta animate-fadeInUp" style={{ animationDelay: '1.6s' }}>

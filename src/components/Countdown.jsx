@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './Countdown.css'
 
-const WEDDING_DATE = new Date('2026-07-07T21:00:00')
+const WEDDING_DATE = new Date('2026-07-06T21:00:00')
 
 function getTimeLeft() {
   const now = new Date()
@@ -66,8 +66,8 @@ export default function Countdown() {
         </div>
 
         <p className="countdown-footnote">
-          🌸 Jaimala — 6th July 2026, 9:00 PM &nbsp;|&nbsp; 💍 Vidhi (Fera) — 7th July 2026, 6:30 AM, venue; Hotel Shri Arjun Palace
-          1791, Maharana Pratap ward 44 Jabalpur road, Katni, M.P.-483501
+          🌸 Jaimala — 6th July 2026, 9:00 PM &nbsp;|&nbsp; 💍 Vidhi and Fera — 7th July 2026, 6:30 AM, Arjun Palace,
+          Near Collectorate, Katni, M.P.-483501
         </p>
       </div>
     </section>

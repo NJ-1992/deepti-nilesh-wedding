@@ -5,17 +5,17 @@ const VENUES = [
     name: 'Grand Wedding Hall',
     event: 'Wedding Ceremony',
     emoji: '🛕',
-    address: 'Grand Wedding Hall, Hotel Shri Arjun Palace, Jabalpur Road, Katni, M.P. - 483501',
-    mapQuery: 'Grand+Wedding+Hall+Hotel+Shri+Arjun+Palace+Jabalpur+Road+Katni+Madhya+Pradesh+483501',
-    details: ['Valet Parking Available', 'Air Conditioned', 'Catering Included', 'Capacity: 500+'],
+    address: 'Grand Wedding Hall, Arjun Palace, Near Collectorate, Katni, M.P. - 483501',
+    mapQuery: 'Grand+Wedding+Hall+Arjun+Palace+Near+Collectorate+Katni+Madhya+Pradesh+483501',
+    details: [],
   },
   {
-    name: 'Shri Charbhuja Community Hall',
+    name: 'Jain Dharamshala, Kanjarda',
     event: 'Reception Evening',
     emoji: '🏛️',
-    address: 'Shri Charbhuja Community Hall, Kanjrada, Neemuch, M.P. - 458110',
-    mapQuery: 'Shri+Charbhuja+Community+Hall+Kanjrada+Neemuch+Madhya+Pradesh+458110',
-    details: ['Free Parking', 'Open Air + Indoor', 'Live Entertainment', 'Dinner Buffet'],
+    address: 'Jain Dharamshala, Kanjarda, Neemuch, M.P. - 458110',
+    mapQuery: 'Jain+Dharamshala+Kanjarda+Neemuch+Madhya+Pradesh+458110',
+    details: [],
   },
 ]
 
@@ -58,7 +58,7 @@ export default function Venue() {
         <div className="map-duo">
           <div
             className="map-placeholder"
-            onClick={() => openMaps('Grand+Wedding+Hall+Hotel+Shri+Arjun+Palace+Jabalpur+Road+Katni+Madhya+Pradesh+483501')}
+            onClick={() => openMaps('Grand+Wedding+Hall+Arjun+Palace+Near Collectorate+Katni+Madhya+Pradesh+483501')}
           >
             <div className="map-content">
               <div className="map-pin">📍</div>
@@ -74,12 +74,12 @@ export default function Venue() {
 
           <div
             className="map-placeholder"
-            onClick={() => openMaps('Shri+Charbhuja+Community+Hall+Kanjrada+Neemuch+Madhya+Pradesh+458110')}
+            onClick={() => openMaps('Jain+Dharamshala+Kanjarda+Neemuch+Madhya+Pradesh+458110')}
           >
             <div className="map-content">
               <div className="map-pin">📍</div>
               <h4>Reception Evening</h4>
-              <p>Neemuch, Madhya Pradesh</p>
+              <p>Kanjarda, Neemuch, Madhya Pradesh</p>
               <div className="map-road map-road-h" />
               <div className="map-road map-road-v" />
             </div>

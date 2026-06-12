@@ -30,7 +30,7 @@ export default function Footer({ shareOnWhatsApp }) {
           <span>Nilesh</span>
         </div>
 
-        <p className="footer-date">July 07, 2026 · Katni, Madhya Pradesh</p>
+        <p className="footer-date">July 06, 2026 · Katni, Madhya Pradesh</p>
 
         <div className="gold-divider" style={{maxWidth:'300px', margin:'20px auto'}}><span>✦</span></div>
 

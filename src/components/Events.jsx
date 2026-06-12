@@ -7,11 +7,10 @@ const EVENTS = [
     name: 'Haldi',
     devanagari: 'हल्दी',
     date: 'July 4, 2026',
+    day: 'Saturday',
     time: '10:00 AM – 1:00 PM',
     venue: 'Family Residence',
-    address: 'Katni, M.P.',
-    desc: 'A joyful ceremony where turmeric paste is applied to the couple for blessings, beauty and prosperity. The air fills with laughter, songs and vibrant yellow.',
-    dress: 'Yellow / Bright Colours',
+    address: 'Neemuch, M.P.',
     color: '#F6D365',
     bg: 'linear-gradient(135deg, #FFF9C4 0%, #FFF3CD 100%)',
   },
@@ -21,11 +20,10 @@ const EVENTS = [
     name: 'Mehendi',
     devanagari: 'मेहंदी',
     date: 'July 4, 2026',
-    time: '4:00 PM – 9:00 PM',
+    day: 'Saturday',
+    time: '5:00 PM – 7:00 PM',
     venue: 'Family Residence',
-    address: 'Katni, M.p.',
-    desc: 'Intricate henna designs adorn the bride\'s hands, each pattern telling a story of love. An evening of beauty, tradition and togetherness.',
-    dress: 'Green / Pastel',
+    address: 'Neemuch, M.P.',
     color: '#4CAF50',
     bg: 'linear-gradient(135deg, #E8F5E9 0%, #DCEDC8 100%)',
   },
@@ -34,12 +32,11 @@ const EVENTS = [
     emoji: '🎶',
     name: 'Sangeet',
     devanagari: 'संगीत',
-    date: 'July 5, 2026',
-    time: '7:00 PM – 11:00 PM',
+    date: 'July 4, 2026',
+    day: 'Saturday',
+    time: '8:00 PM – 11:00 PM',
     venue: 'Family Residence',
-    address: 'Katni, M.P.',
-    desc: 'An evening of music, dance and merriment as both families come together. The night echoes with Bollywood beats and classical rhythms.',
-    dress: 'Ethnic / Semi-Formal',
+    address: 'Neemuch, M.P.',
     color: '#9C27B0',
     bg: 'linear-gradient(135deg, #F3E5F5 0%, #EDE7F6 100%)',
   },
@@ -49,11 +46,10 @@ const EVENTS = [
     name: 'Wedding',
     devanagari: 'विवाह',
     date: 'July 06, 2026',
+    day: 'Monday',
     time: '7:00 PM Onwards',
     venue: 'Grand Wedding Hall',
-    address: 'Hotel shri Arjun Palace, Katni, M.P.',
-    desc: 'The sacred union of Deepti and Nilesh under the holy fire (Agni). Seven vows, one lifetime, and a beginning of a beautiful journey together.',
-    dress: 'Traditional / Ethnic Wear',
+    address: ' Arjun Palace, Near Collectorate, Katni, M.P.',
     color: '#C9952A',
     bg: 'linear-gradient(135deg, #FFF8E1 0%, #FFECB3 100%)',
     highlight: true,
@@ -64,11 +60,10 @@ const EVENTS = [
     name: 'Reception',
     devanagari: 'स्वागत',
     date: 'July 09, 2026',
+    day: 'Thursday',
     time: '7:00 PM – 12:00 PM',
     venue: 'Family Residence',
     address: 'Kanjarda, Neemuch, M.P.',
-    desc: 'Join us for an elegant evening reception to bless and celebrate the newly wedded couple. Fine dining, dancing and memories to treasure forever.',
-    dress: 'Formal / Cocktail',
     color: '#E91E63',
     bg: 'linear-gradient(135deg, #FCE4EC 0%, #F8BBD0 100%)',
   },
@@ -117,10 +112,7 @@ export default function Events() {
                     </div>
                   </div>
                   <div className="event-detail">
-                    <span className="detail-icon">👗</span>
                     <div>
-                      <strong>Dress Code</strong>
-                      <span>{event.dress}</span>
                     </div>
                   </div>
                 </div>
