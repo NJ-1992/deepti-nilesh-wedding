@@ -1,6 +1,6 @@
 import './Footer.css'
 
-export default function Footer({ shareOnWhatsApp }) {
+export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-top-border" />
@@ -40,9 +40,6 @@ export default function Footer({ shareOnWhatsApp }) {
         </p>
 
         <div className="footer-actions">
-          <button className="footer-whatsapp" onClick={shareOnWhatsApp}>
-            📲 Share This Invitation on WhatsApp
-          </button>
           <a href="#hero" className="footer-top">↑ Back to Top</a>
         </div>
 
