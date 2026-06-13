@@ -62,7 +62,7 @@ const EVENTS = [
     date: 'July 09, 2026',
     day: 'Thursday',
     time: '7:00 PM – 12:00 PM',
-    venue: 'Family Residence',
+    venue: 'Jain Dharamshala, Near Family Residence',
     address: 'Kanjarda, Neemuch, M.P.',
     color: '#E91E63',
     bg: 'linear-gradient(135deg, #FCE4EC 0%, #F8BBD0 100%)',
