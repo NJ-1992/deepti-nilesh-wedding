@@ -8,12 +8,7 @@ function getTimeLeft() {
   const diff = WEDDING_DATE.getTime() - now.getTime()
 
   if (diff <= 0) {
-    return {
-      days: 32,
-      hours: 8,
-      minutes: 0,
-      seconds: 0,
-    }
+    return { days: 0, hours: 0, minutes: 0, seconds: 0 }
   }
 
   return {
@@ -28,16 +23,13 @@ export default function Countdown() {
   const [time, setTime] = useState(getTimeLeft())
 
   useEffect(() => {
-    const id = setInterval(() => {
-      setTime(getTimeLeft())
-    }, 1000)
-
+    const id = setInterval(() => setTime(getTimeLeft()), 1000)
     return () => clearInterval(id)
   }, [])
 
   const units = [
-    { label: 'Days', value: time.days },
-    { label: 'Hours', value: time.hours },
+    { label: 'Days',    value: time.days    },
+    { label: 'Hours',   value: time.hours   },
     { label: 'Minutes', value: time.minutes },
     { label: 'Seconds', value: time.seconds },
   ]
@@ -65,10 +57,27 @@ export default function Countdown() {
           ))}
         </div>
 
-        <p className="countdown-footnote">
-          🌸 Jaimala — 6th July 2026, 9:00 PM &nbsp;|&nbsp; 💍 Vidhi and Fera — 7th July 2026, 6:30 AM, Arjun Palace,
-          Near Collectorate, Katni, M.P.-483501
-        </p>
+        {/* ── Colorful event footnote ── */}
+        <div className="countdown-events">
+
+          <div className="event-pill event-pill--pink">
+            <span className="event-emoji">🌸</span>
+            <div className="event-details">
+              <span className="event-name">Jaimala</span>
+              <span className="event-time">6th July 2026 &nbsp;·&nbsp; 9:00 PM</span>
+            </div>
+          </div>
+
+          <div className="event-pill event-pill--gold">
+            <span className="event-emoji">💍</span>
+            <div className="event-details">
+              <span className="event-name">Vidhi &amp; Fera</span>
+              <span className="event-time">7th July 2026 &nbsp;·&nbsp; 6:30 AM</span>
+              <span className="event-venue">Arjun Palace, Near Collectorate, Katni, M.P. – 483501</span>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
   )

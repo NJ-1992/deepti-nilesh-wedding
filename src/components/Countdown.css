@@ -19,20 +19,17 @@
   bottom: -20px; right: -20px;
   transform: scaleX(-1);
 }
-
 .countdown-inner {
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
 }
-
 .countdown-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   margin: 40px 0 32px;
 }
-
 .countdown-card {
   background: linear-gradient(160deg, var(--maroon) 0%, var(--maroon-dark) 100%);
   border: 1px solid rgba(201,149,42,0.4);
@@ -49,7 +46,6 @@
   height: 2px;
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
-
 .countdown-value {
   font-family: 'Playfair Display', serif;
   font-size: clamp(2.5rem, 6vw, 4rem);
@@ -59,7 +55,6 @@
   margin-bottom: 8px;
   filter: drop-shadow(0 2px 8px rgba(201,149,42,0.4));
 }
-
 .countdown-label {
   font-family: 'Cormorant Garamond', serif;
   font-size: 0.75rem;
@@ -68,7 +63,6 @@
   color: var(--gold-pale);
   opacity: 0.8;
 }
-
 .countdown-footnote {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.1rem;
@@ -77,8 +71,211 @@
   letter-spacing: 0.05em;
 }
 
+/* ── Event pills ── */
+.countdown-events {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 36px;
+  align-items: center;
+}
+.event-pill {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 24px;
+  border-radius: 50px;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+.event-pill--pink {
+  background: linear-gradient(135deg, #ffe0f0, #ffc2d4);
+  border: 1.5px solid #f48fb1;
+}
+.event-pill--gold {
+  background: linear-gradient(135deg, #fff8e1, #ffe082);
+  border: 1.5px solid #C8955A;
+}
+.event-emoji {
+  font-size: 28px;
+  line-height: 1;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+.event-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+}
+.event-name {
+  font-size: 17px;
+  font-weight: 800;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: #2C1A3A;
+  letter-spacing: 0.5px;
+}
+.event-time {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #7B3F00;
+  letter-spacing: 0.3px;
+}
+.event-venue {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #5A3E00;
+  margin-top: 2px;
+  line-height: 1.4;
+}
+
 @media (max-width: 480px) {
   .countdown-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .event-pill {
+    border-radius: 16px;
+    padding: 12px 16px;
+  }
+}.countdown-section {
+  background: linear-gradient(180deg, var(--cream) 0%, var(--cream-dark) 100%);
+  padding: 80px 24px;
+  position: relative;
+  overflow: hidden;
+}
+.countdown-section::before {
+  content: '🌺';
+  position: absolute;
+  font-size: 8rem;
+  opacity: 0.04;
+  top: -20px; left: -20px;
+}
+.countdown-section::after {
+  content: '🌺';
+  position: absolute;
+  font-size: 8rem;
+  opacity: 0.04;
+  bottom: -20px; right: -20px;
+  transform: scaleX(-1);
+}
+.countdown-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin: 40px 0 32px;
+}
+.countdown-card {
+  background: linear-gradient(160deg, var(--maroon) 0%, var(--maroon-dark) 100%);
+  border: 1px solid rgba(201,149,42,0.4);
+  border-radius: 4px;
+  padding: 24px 12px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(123,28,46,0.25), inset 0 1px 0 rgba(255,255,255,0.1);
+}
+.countdown-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.countdown-value {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  color: var(--gold-light);
+  line-height: 1;
+  margin-bottom: 8px;
+  filter: drop-shadow(0 2px 8px rgba(201,149,42,0.4));
+}
+.countdown-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-pale);
+  opacity: 0.8;
+}
+.countdown-footnote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--text-medium);
+  letter-spacing: 0.05em;
+}
+
+/* ── Event pills ── */
+.countdown-events {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 36px;
+  align-items: center;
+}
+.event-pill {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 24px;
+  border-radius: 50px;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+.event-pill--pink {
+  background: linear-gradient(135deg, #ffe0f0, #ffc2d4);
+  border: 1.5px solid #f48fb1;
+}
+.event-pill--gold {
+  background: linear-gradient(135deg, #fff8e1, #ffe082);
+  border: 1.5px solid #C8955A;
+}
+.event-emoji {
+  font-size: 28px;
+  line-height: 1;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+.event-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+}
+.event-name {
+  font-size: 17px;
+  font-weight: 800;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: #2C1A3A;
+  letter-spacing: 0.5px;
+}
+.event-time {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #7B3F00;
+  letter-spacing: 0.3px;
+}
+.event-venue {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #5A3E00;
+  margin-top: 2px;
+  line-height: 1.4;
+}
+
+@media (max-width: 480px) {
+  .countdown-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .event-pill {
+    border-radius: 16px;
+    padding: 12px 16px;
   }
 }
