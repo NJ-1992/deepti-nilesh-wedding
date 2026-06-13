@@ -15,7 +15,7 @@ function App() {
   const [isPlaying, setIsPlaying] = useState(false)
   const audioRef = useRef(null)
 
-  const MUSIC_URL = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'
+const MUSIC_URL = '/wedding-music.mp3'
 
   const toggleMusic = () => {
     if (!audioRef.current) return
