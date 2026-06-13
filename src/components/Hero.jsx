@@ -58,7 +58,7 @@ export default function Hero() {
         </div>
 
         <p className="hero-tagline animate-fadeInUp" style={{ animationDelay: '1.1s' }}>
-          Are joyfully getting married on
+           Cordially invite you to celebrate their wedding and bless their new beginning.
         </p>
 
         {/* Wedding date */}
