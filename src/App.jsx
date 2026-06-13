@@ -15,16 +15,20 @@ function App() {
   const [isPlaying, setIsPlaying] = useState(false)
   const audioRef = useRef(null)
 
-const MUSIC_URL = '/wedding-music.mp3'
+  const MUSIC_URL = '/wedding-music.mp3'
 
   const toggleMusic = () => {
     if (!audioRef.current) return
     if (isPlaying) {
       audioRef.current.pause()
+      setIsPlaying(false)
     } else {
-      audioRef.current.play().catch(() => {})
+      audioRef.current.play()
+        .then(() => setIsPlaying(true))
+        .catch((err) => {
+          console.error('Audio play failed:', err)
+        })
     }
-    setIsPlaying(!isPlaying)
   }
 
   return (
