@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Countdown from './components/Countdown'
@@ -9,12 +9,12 @@ import Venue from './components/Venue'
 import RSVP from './components/RSVP'
 import Footer from './components/Footer'
 import PetalRain from './components/PetalRain'
+import WhatsAppInvite from './components/WhatsAppInvite'
 
 function App() {
   const [isPlaying, setIsPlaying] = useState(false)
   const audioRef = useRef(null)
 
-  // Use a royalty-free Indian instrumental (shehnai/classical) from public CDN
   const MUSIC_URL = 'https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3'
 
   const toggleMusic = () => {
@@ -25,13 +25,6 @@ function App() {
       audioRef.current.play().catch(() => {})
     }
     setIsPlaying(!isPlaying)
-  }
-
-  const shareOnWhatsApp = () => {
-    const text = encodeURIComponent(
-      `🌸 You're invited to the wedding of Deepti & Nilesh! 💍\n\nJoin us to celebrate this beautiful union.\n\nWedding Date: February 14, 2026\n\n🔗 View Invitation: ${window.location.href}`
-    )
-    window.open(`https://wa.me/?text=${text}`, '_blank')
   }
 
   return (
@@ -47,7 +40,6 @@ function App() {
       <Navbar
         isPlaying={isPlaying}
         toggleMusic={toggleMusic}
-        shareOnWhatsApp={shareOnWhatsApp}
       />
       <main>
         <Hero />
@@ -57,8 +49,9 @@ function App() {
         <Gallery />
         <Venue />
         <RSVP />
+        <WhatsAppInvite />
       </main>
-      <Footer shareOnWhatsApp={shareOnWhatsApp} />
+      <Footer />
     </>
   )
 }
